@@ -18,9 +18,11 @@
 		44D31FB621A4676C0007F4D8 /* SearchViewController+CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FB521A4676C0007F4D8 /* SearchViewController+CollectionViewDelegate.swift */; };
 		44D31FB821A46CBC0007F4D8 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FB721A46CBC0007F4D8 /* PageCollectionViewCell.swift */; };
 		44D31FBA21A46D670007F4D8 /* PageCollectionViewCell+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FB921A46D670007F4D8 /* PageCollectionViewCell+Configure.swift */; };
+		96C224BC897DF443AD7B8E4C /* Pods_SearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC28203B5B0F389FE44E53B1 /* Pods_SearchApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30540AA6D0063FB61B2AE882 /* Pods-SearchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchApp/Pods-SearchApp.release.xcconfig"; sourceTree = "<group>"; };
 		44D31F9A21A457A90007F4D8 /* SearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D31F9D21A457A90007F4D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D31F9F21A457A90007F4D8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		44D31FB521A4676C0007F4D8 /* SearchViewController+CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+CollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		44D31FB721A46CBC0007F4D8 /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
 		44D31FB921A46D670007F4D8 /* PageCollectionViewCell+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageCollectionViewCell+Configure.swift"; sourceTree = "<group>"; };
+		8385EAED0579EDC3880EEE8A /* Pods-SearchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchApp/Pods-SearchApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FC28203B5B0F389FE44E53B1 /* Pods_SearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C224BC897DF443AD7B8E4C /* Pods_SearchApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				44D31F9C21A457A90007F4D8 /* SearchApp */,
 				44D31F9B21A457A90007F4D8 /* Products */,
+				A11A0F35387FAD2EDC279250 /* Pods */,
+				ED978D52A7BA62AF0F29A49F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +89,23 @@
 			path = SearchApp;
 			sourceTree = "<group>";
 		};
+		A11A0F35387FAD2EDC279250 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8385EAED0579EDC3880EEE8A /* Pods-SearchApp.debug.xcconfig */,
+				30540AA6D0063FB61B2AE882 /* Pods-SearchApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED978D52A7BA62AF0F29A49F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC28203B5B0F389FE44E53B1 /* Pods_SearchApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44D31FAC21A457AB0007F4D8 /* Build configuration list for PBXNativeTarget "SearchApp" */;
 			buildPhases = (
+				D7ED37E80FFB8C9810CAD19B /* [CP] Check Pods Manifest.lock */,
 				44D31F9621A457A90007F4D8 /* Sources */,
 				44D31F9721A457A90007F4D8 /* Frameworks */,
 				44D31F9821A457A90007F4D8 /* Resources */,
+				C80F41DF6930C37607A117A1 /* [CP] Embed Pods Frameworks */,
+				30717482F7A399A8B9A25371 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,6 +174,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30717482F7A399A8B9A25371 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchApp/Pods-SearchApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C80F41DF6930C37607A117A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SearchApp/Pods-SearchApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchApp/Pods-SearchApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7ED37E80FFB8C9810CAD19B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SearchApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44D31F9621A457A90007F4D8 /* Sources */ = {
@@ -304,15 +385,13 @@
 		};
 		44D31FAD21A457AB0007F4D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8385EAED0579EDC3880EEE8A /* Pods-SearchApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LHBN7KJE99;
 				INFOPLIST_FILE = SearchApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Nagib-Bin-Azad.SearchApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -322,15 +401,13 @@
 		};
 		44D31FAE21A457AB0007F4D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30540AA6D0063FB61B2AE882 /* Pods-SearchApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LHBN7KJE99;
 				INFOPLIST_FILE = SearchApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Nagib-Bin-Azad.SearchApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
