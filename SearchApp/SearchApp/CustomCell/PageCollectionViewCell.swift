@@ -16,4 +16,8 @@ class PageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var pageImageView: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
 }

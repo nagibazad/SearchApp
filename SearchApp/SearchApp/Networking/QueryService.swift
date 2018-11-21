@@ -9,6 +9,9 @@
 import Foundation
 
 // Runs query data task, and stores results in array of Pages
+
+let FETCH_LIMIT = 20
+
 class QueryService {
 
   typealias JSONDictionary = [String: Any]
@@ -19,30 +22,41 @@ class QueryService {
   var dataTask: URLSessionDataTask?
   var pages: [Page] = []
   var errorMessage = ""
-
+  var canSendNextRequest: Bool = true
+    
   func getSearchResults(searchTerm: String, completion: @escaping QueryResult) {
     
+    if canSendNextRequest == false {
+        return
+    }
     dataTask?.cancel()
     
     if var urlComponents = URLComponents(string: "https://en.wikipedia.org/w/api.php") {
-      urlComponents.query = "action=query&generator=search&gsrlimit=20&gsroffset=\(pages.count)&gsrsearch=\(searchTerm)&utf8=&format=json&prop=info|pageimages&inprop=url"
+      urlComponents.query = "action=query&generator=search&gsrlimit=\(FETCH_LIMIT)&gsroffset=\(pages.count)&gsrsearch=\(searchTerm)&utf8=&format=json&prop=info|pageimages&inprop=url"
       
       guard let url = urlComponents.url else { return }
       
-      dataTask = defaultSession.dataTask(with: url) { data, response, error in
-        defer { self.dataTask = nil }
-        
-        if let error = error {
-          self.errorMessage += "DataTask error: " + error.localizedDescription + "\n"
-        } else if let data = data,
-          let response = response as? HTTPURLResponse,
-          response.statusCode == 200 {
-          self.updateSearchResults(data)
-          
-          DispatchQueue.main.async {
-            completion(self.pages, self.errorMessage)
-          }
+      canSendNextRequest = false
+      dataTask = defaultSession.dataTask(with: url) {[weak self] data, response, error in
+        if let strongSelf = self {
+            defer {
+                strongSelf.dataTask = nil
+                strongSelf.canSendNextRequest = true
+            }
+            
+            if let error = error {
+                strongSelf.errorMessage += "DataTask error: " + error.localizedDescription + "\n"
+            } else if let data = data,
+                let response = response as? HTTPURLResponse,
+                response.statusCode == 200 {
+                strongSelf.updateSearchResults(data)
+                
+                DispatchQueue.main.async {
+                    completion(strongSelf.pages, strongSelf.errorMessage)
+                }
+            }
         }
+        
       }
       
       dataTask?.resume()
@@ -51,7 +65,7 @@ class QueryService {
 
   fileprivate func updateSearchResults(_ data: Data) {
     var response: JSONDictionary?
-    pages.removeAll()
+    //pages.removeAll()
 
     do {
       response = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary
@@ -67,12 +81,15 @@ class QueryService {
     for pageDictionary in pages {
         if let pageDictionary = pageDictionary.value as? JSONDictionary,
             let title = pageDictionary["title"] as? String,
-            let imageUrlString = (pageDictionary["thumbnail"] as? [String : Any])?["source"] as? String,
             let pageId = pageDictionary["pageid"] as? Int,
-            let imageUrl = URL(string: imageUrlString),
             let pageUrlString = pageDictionary["fullurl"] as? String,
             let pageUrl = URL(string: pageUrlString)
          {
+            var imageUrl: URL?
+            if let imageUrlString = (pageDictionary["thumbnail"] as? [String : Any])?["source"] as? String {
+                imageUrl = URL(string: imageUrlString)
+            }
+
         self.pages.append(Page(title: title, pageId: pageId, pageUrl: pageUrl, imageUrl: imageUrl))
       } else {
         errorMessage += "Problem parsing pageDictionary\n"

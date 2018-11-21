@@ -17,20 +17,25 @@ extension SearchViewController: UISearchBarDelegate {
   
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     dismissKeyboard()
-    if !searchBar.text!.isEmpty {
-      UIApplication.shared.isNetworkActivityIndicatorVisible = true
-      queryService.getSearchResults(searchTerm: searchBar.text!) { results, errorMessage in
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        if let results = results {
-          self.searchResults = results
-          self.collectionView.reloadData()
-          self.collectionView.setContentOffset(CGPoint.zero, animated: false)
-        }
-        if !errorMessage.isEmpty { print("Search error: " + errorMessage) }
-      }
-    }
+    searchResults.removeAll()
+    queryService.pages.removeAll()
+    collectionView.isHidden = false
+    tableView.isHidden = true
+    collectionView.reloadData()
+    sendRequestForData()
   }
   
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            searchResults.removeAll()
+            queryService.pages.removeAll()
+            collectionView.reloadData()
+            collectionView.isHidden = true
+            tableView.isHidden = false
+            tableView.reloadData()
+        }
+    }
+    
   func position(for bar: UIBarPositioning) -> UIBarPosition {
     return .topAttached
   }
