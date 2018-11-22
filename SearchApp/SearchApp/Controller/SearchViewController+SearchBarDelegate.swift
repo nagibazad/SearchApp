@@ -19,9 +19,6 @@ extension SearchViewController: UISearchBarDelegate {
     dismissKeyboard()
     searchResults.removeAll()
     queryService.pages.removeAll()
-    collectionView.isHidden = false
-    tableView.isHidden = true
-    collectionView.reloadData()
     sendRequestForData()
   }
   
@@ -29,9 +26,6 @@ extension SearchViewController: UISearchBarDelegate {
         if searchText.isEmpty {
             searchResults.removeAll()
             queryService.pages.removeAll()
-            collectionView.reloadData()
-            collectionView.isHidden = true
-            tableView.isHidden = false
             fetchBookmarks()
         }
     }

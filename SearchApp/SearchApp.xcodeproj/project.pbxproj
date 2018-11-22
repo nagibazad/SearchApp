@@ -11,6 +11,8 @@
 		44089D0321A6BB9400FD05CF /* HistoryViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44089D0221A6BB9400FD05CF /* HistoryViewController+TableViewDelegate.swift */; };
 		44089D0521A6C53B00FD05CF /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44089D0421A6C53B00FD05CF /* BookmarkViewController.swift */; };
 		44089D0721A6C5FF00FD05CF /* BookmarkViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44089D0621A6C5FF00FD05CF /* BookmarkViewController+TableViewDelegate.swift */; };
+		44089D0921A6D65E00FD05CF /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44089D0821A6D65E00FD05CF /* SearchTableViewCell.swift */; };
+		44089D0B21A6D67500FD05CF /* SearchTableViewCell+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44089D0A21A6D67500FD05CF /* SearchTableViewCell+Configure.swift */; };
 		4447D66321A5334B00574CF9 /* SearchViewController+ScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447D66221A5334B00574CF9 /* SearchViewController+ScrollDelegate.swift */; };
 		4447D66521A53DD800574CF9 /* PageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447D66421A53DD800574CF9 /* PageDetailsViewController.swift */; };
 		44AC77DC21A5B87700AC9163 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AC77DB21A5B87700AC9163 /* CoreDataHandler.swift */; };
@@ -25,9 +27,6 @@
 		44D31FB021A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FAF21A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift */; };
 		44D31FB221A45EC10007F4D8 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FB121A45EC00007F4D8 /* QueryService.swift */; };
 		44D31FB421A4634E0007F4D8 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FB321A4634E0007F4D8 /* Page.swift */; };
-		44D31FB621A4676C0007F4D8 /* SearchViewController+CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FB521A4676C0007F4D8 /* SearchViewController+CollectionViewDelegate.swift */; };
-		44D31FB821A46CBC0007F4D8 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FB721A46CBC0007F4D8 /* PageCollectionViewCell.swift */; };
-		44D31FBA21A46D670007F4D8 /* PageCollectionViewCell+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FB921A46D670007F4D8 /* PageCollectionViewCell+Configure.swift */; };
 		96C224BC897DF443AD7B8E4C /* Pods_SearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC28203B5B0F389FE44E53B1 /* Pods_SearchApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +36,8 @@
 		44089D0221A6BB9400FD05CF /* HistoryViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		44089D0421A6C53B00FD05CF /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		44089D0621A6C5FF00FD05CF /* BookmarkViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookmarkViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		44089D0821A6D65E00FD05CF /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		44089D0A21A6D67500FD05CF /* SearchTableViewCell+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchTableViewCell+Configure.swift"; sourceTree = "<group>"; };
 		4447D66221A5334B00574CF9 /* SearchViewController+ScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+ScrollDelegate.swift"; sourceTree = "<group>"; };
 		4447D66421A53DD800574CF9 /* PageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailsViewController.swift; sourceTree = "<group>"; };
 		44AC77DB21A5B87700AC9163 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
@@ -53,9 +54,6 @@
 		44D31FAF21A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchViewController+SearchBarDelegate.swift"; sourceTree = "<group>"; };
 		44D31FB121A45EC00007F4D8 /* QueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		44D31FB321A4634E0007F4D8 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
-		44D31FB521A4676C0007F4D8 /* SearchViewController+CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+CollectionViewDelegate.swift"; sourceTree = "<group>"; };
-		44D31FB721A46CBC0007F4D8 /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
-		44D31FB921A46D670007F4D8 /* PageCollectionViewCell+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageCollectionViewCell+Configure.swift"; sourceTree = "<group>"; };
 		8385EAED0579EDC3880EEE8A /* Pods-SearchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchApp/Pods-SearchApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FC28203B5B0F389FE44E53B1 /* Pods_SearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,7 +86,6 @@
 				44D31F9F21A457A90007F4D8 /* SearchViewController.swift */,
 				44D31FAF21A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift */,
 				4447D66221A5334B00574CF9 /* SearchViewController+ScrollDelegate.swift */,
-				44D31FB521A4676C0007F4D8 /* SearchViewController+CollectionViewDelegate.swift */,
 				44B307F321A56E39008E8C20 /* SearchViewController+TableViewDelegate.swift */,
 				4447D66421A53DD800574CF9 /* PageDetailsViewController.swift */,
 				44089D0021A6B92B00FD05CF /* HistoryViewController.swift */,
@@ -118,8 +115,8 @@
 		44B489AC21A4881700A0EC46 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				44D31FB721A46CBC0007F4D8 /* PageCollectionViewCell.swift */,
-				44D31FB921A46D670007F4D8 /* PageCollectionViewCell+Configure.swift */,
+				44089D0821A6D65E00FD05CF /* SearchTableViewCell.swift */,
+				44089D0A21A6D67500FD05CF /* SearchTableViewCell+Configure.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -304,12 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44089D0B21A6D67500FD05CF /* SearchTableViewCell+Configure.swift in Sources */,
 				44D31FB221A45EC10007F4D8 /* QueryService.swift in Sources */,
 				44B307F421A56E39008E8C20 /* SearchViewController+TableViewDelegate.swift in Sources */,
 				44089D0321A6BB9400FD05CF /* HistoryViewController+TableViewDelegate.swift in Sources */,
-				44D31FB821A46CBC0007F4D8 /* PageCollectionViewCell.swift in Sources */,
 				44089D0121A6B92B00FD05CF /* HistoryViewController.swift in Sources */,
-				44D31FBA21A46D670007F4D8 /* PageCollectionViewCell+Configure.swift in Sources */,
 				44D31FA021A457A90007F4D8 /* SearchViewController.swift in Sources */,
 				44AC77DF21A5B91E00AC9163 /* SearchDataModel.xcdatamodeld in Sources */,
 				44D31FB021A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift in Sources */,
@@ -318,8 +314,8 @@
 				44089D0721A6C5FF00FD05CF /* BookmarkViewController+TableViewDelegate.swift in Sources */,
 				4447D66321A5334B00574CF9 /* SearchViewController+ScrollDelegate.swift in Sources */,
 				44D31F9E21A457A90007F4D8 /* AppDelegate.swift in Sources */,
-				44D31FB621A4676C0007F4D8 /* SearchViewController+CollectionViewDelegate.swift in Sources */,
 				44089D0521A6C53B00FD05CF /* BookmarkViewController.swift in Sources */,
+				44089D0921A6D65E00FD05CF /* SearchTableViewCell.swift in Sources */,
 				4447D66521A53DD800574CF9 /* PageDetailsViewController.swift in Sources */,
 				44D31FB421A4634E0007F4D8 /* Page.swift in Sources */,
 			);

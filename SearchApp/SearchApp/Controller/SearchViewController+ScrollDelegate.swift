@@ -12,11 +12,13 @@ import UIKit.UIScrollView
 extension SearchViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if let _ = scrollView as? UICollectionView {
+        if let _ = scrollView as? UITableView {
             let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
             if bottomEdge >= scrollView.contentSize.height {
                 // we are at the end
-                sendRequestForData()
+                if searchBar.text?.isEmpty == false {
+                    sendRequestForData()
+                }
             }
             if (self.lastContentOffset > scrollView.contentOffset.y) {
                 // move up

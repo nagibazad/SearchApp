@@ -12,7 +12,6 @@ import CoreData
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     lazy var tapRecognizer: UITapGestureRecognizer = {
         var recognizer = UITapGestureRecognizer(target:self, action: #selector(dismissKeyboard))
@@ -41,7 +40,7 @@ class SearchViewController: UIViewController {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 if let results = results {
                     self.searchResults = results
-                    self.collectionView.reloadData()
+                    self.tableView.reloadData()
                 }
                 if !errorMessage.isEmpty { print("Search error: " + errorMessage) }
             }
