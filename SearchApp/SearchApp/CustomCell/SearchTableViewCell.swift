@@ -8,6 +8,8 @@
 
 import UIKit
 
+let k_SearchTableViewCellIdentifier = "SearchTableViewCellID"
+
 class SearchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var pageImageView: UIImageView!

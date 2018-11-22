@@ -40,7 +40,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             cell!.detailTextLabel?.text = bookmark.pageUrl.absoluteString
             return cell!
         }else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCellID", for: indexPath) as! SearchTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: k_SearchTableViewCellIdentifier, for: indexPath) as! SearchTableViewCell
             let page = searchResults[indexPath.row]
             cell.configure(with: page)
             return cell

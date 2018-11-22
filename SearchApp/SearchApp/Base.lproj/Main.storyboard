@@ -110,7 +110,9 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="LeZ-pq-xWm" id="0nJ-km-qKa"/>
+                        <outlet property="searchBarTopConstraint" destination="loq-vE-0Ff" id="yvL-Ud-J6E"/>
                         <outlet property="tableView" destination="Fea-uy-ba8" id="g88-AG-HWb"/>
+                        <outlet property="tableViewBottomConstraint" destination="PbM-sW-Ljr" id="nO3-Jf-dlW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNt-AA-snh" userLabel="First Responder" sceneMemberID="firstResponder"/>

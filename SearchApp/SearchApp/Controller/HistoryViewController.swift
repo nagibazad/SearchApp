@@ -22,7 +22,7 @@ class HistoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.title = "History"
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -22,7 +22,7 @@ class BookmarkViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.title = "Bookmarks"
     }
     
     override func viewWillAppear(_ animated: Bool) {

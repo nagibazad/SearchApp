@@ -11,13 +11,13 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let tintColor =  UIColor(red: (247/255), green: (247/255), blue: (247/255), alpha: 1)//UIColor(red: 242/255, green: 71/255, blue: 63/255, alpha: 1)
+    let tintColor =  UIColor(red: (247/255), green: (247/255), blue: (247/255), alpha: 1)
     var window: UIWindow?
-
-
+    var tabBarController: UITabBarController!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let tabbarController = UITabBarController()
+        tabBarController = UITabBarController()
         let searchViewController = SearchViewController.initializeSearchViewController()
         searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         let historyViewController = HistoryViewController.initializeHistoryViewController()
@@ -26,9 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let bokmarkViewController = BookmarkViewController.initializeBookmarkViewController()
         let bookmarkNavigationController = UINavigationController(rootViewController: bokmarkViewController)
         bookmarkNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 3)
-        tabbarController.setViewControllers([searchViewController,historyNavigationController,bookmarkNavigationController], animated: true)
+        tabBarController.setViewControllers([searchViewController,historyNavigationController,bookmarkNavigationController], animated: true)
         window = UIWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        window?.rootViewController = tabbarController
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         customizeAppearance()
         return true
@@ -57,12 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func customizeAppearance() {
-//        window?.tintColor = tintColor
         UISearchBar.appearance().barTintColor = tintColor
-//       UINavigationBar.appearance().barTintColor = tintColor
-//        UIToolbar.appearance().barTintColor = tintColor
-//        UINavigationBar.appearance().tintColor = UIColor.white
-//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue):UIColor.white]
     }
 
 }

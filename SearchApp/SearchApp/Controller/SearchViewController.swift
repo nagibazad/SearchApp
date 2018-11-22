@@ -11,6 +11,8 @@ import CoreData
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var searchBarTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     lazy var tapRecognizer: UITapGestureRecognizer = {
@@ -21,6 +23,9 @@ class SearchViewController: UIViewController {
     var searchResults: [Page] = []
     var bookmarks: [Page] = []
     let queryService = QueryService()
+    var isAnimating: Bool = false
+    var isAnimatingSearchBar: Bool = false
+    var offsetChanged: Int = 0
     
     class func initializeSearchViewController() -> SearchViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

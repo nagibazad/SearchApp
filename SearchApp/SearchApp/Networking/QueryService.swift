@@ -11,7 +11,7 @@ import Foundation
 // Runs query data task, and stores results in array of Pages
 
 let FETCH_LIMIT = 20
-
+let API_BASE_URL = "https://en.wikipedia.org/w/api.php"
 class QueryService {
 
   typealias JSONDictionary = [String: Any]
@@ -31,7 +31,7 @@ class QueryService {
     }
     dataTask?.cancel()
     
-    if var urlComponents = URLComponents(string: "https://en.wikipedia.org/w/api.php") {
+    if var urlComponents = URLComponents(string: API_BASE_URL) {
       urlComponents.query = "action=query&generator=search&gsrlimit=\(FETCH_LIMIT)&gsroffset=\(pages.count)&gsrsearch=\(searchTerm)&utf8=&format=json&prop=info|pageimages&inprop=url"
       
       guard let url = urlComponents.url else { return }
