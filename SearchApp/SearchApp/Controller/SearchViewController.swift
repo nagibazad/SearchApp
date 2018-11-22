@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SearchViewController: UIViewController {
 
@@ -19,11 +20,18 @@ class SearchViewController: UIViewController {
     }()
     var lastContentOffset: CGFloat = 0
     var searchResults: [Page] = []
-    var bookmarks: [Bookmark] = []
+    var bookmarks: [Page] = []
     let queryService = QueryService()
+    
+    class func initializeSearchViewController() -> SearchViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let searchViewController = storyboard.instantiateViewController(withIdentifier: "SearchViewControllerID") as! SearchViewController
+        return searchViewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "BookmarkCellIdentifier")
+        fetchBookmarks()
     }
 
     func sendRequestForData() -> Void {
@@ -40,12 +48,24 @@ class SearchViewController: UIViewController {
         }
     }
     
-    @IBAction func historyButtonPressed(_ sender: Any) {
-        
+    func fetchBookmarks() -> Void {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Bookmark")
+        CoreDataHandler.sharedInstance.fetchObjectAsynchronusly(withFetchRequest: fetchRequest) {[weak self](result, error) in
+            if let strongSelf = self {
+                strongSelf.bookmarks.removeAll()
+                result?.forEach({ (managedObject) in
+                    if let bookmarkManagedObject = managedObject as? Bookmark {
+                        strongSelf.bookmarks.append(Page(title: bookmarkManagedObject.title!, pageId: Int(bookmarkManagedObject.pageId), pageUrl: bookmarkManagedObject.pageUrl!, imageUrl:bookmarkManagedObject.imageUrl))
+                    }
+                })
+                DispatchQueue.main.async {
+                    strongSelf.tableView.reloadData()
+                }
+            }
+        }
     }
     
-    @IBAction func bookmarkButoonPressed(_ sender: Any) {
-        
-    }
+    
+    
 }
 

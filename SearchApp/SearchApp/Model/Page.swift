@@ -14,12 +14,16 @@ class Page {
     var pageId: Int
     var pageUrl: URL
     var imageUrl: URL?
-    
-    init(title: String, pageId: Int, pageUrl: URL, imageUrl: URL?) {
+    var isBookmarked: Bool = false
+    var visitedAt: Date?
+
+    init(title: String, pageId: Int, pageUrl: URL, imageUrl: URL?, isBookmarked: Bool = false, visitedAt: Date? = nil) {
         self.title = title
         self.pageId = pageId
         self.pageUrl = pageUrl
         self.imageUrl = imageUrl
+        self.isBookmarked = isBookmarked
+        self.visitedAt = visitedAt
     }
     
 }

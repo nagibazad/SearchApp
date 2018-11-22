@@ -12,7 +12,7 @@ import SDWebImage
 extension PageCollectionViewCell {
     
     func configureCell(with page: Page) -> Void {
-        self.pageImageView.sd_setImage(with: page.imageUrl, completed: nil)
+        self.pageImageView.sd_setImage(with: page.imageUrl, placeholderImage: UIImage(named: "placeholder"), options: .continueInBackground, completed: nil)
         self.pageTitleLabel.text = page.title
     }
     

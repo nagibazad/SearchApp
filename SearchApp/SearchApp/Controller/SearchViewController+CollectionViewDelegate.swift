@@ -35,10 +35,11 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let pageDetailsViewController = PageDetailsViewController.initializePageDetailsViewController(with: searchResults[indexPath.row])
-        pageDetailsViewController.modalPresentationStyle = .overCurrentContext
-        pageDetailsViewController.modalTransitionStyle = .crossDissolve
+        let navigationController = UINavigationController(rootViewController: pageDetailsViewController)
+        navigationController.modalPresentationStyle = .overCurrentContext
+        navigationController.modalTransitionStyle = .crossDissolve
       
-        self.present(pageDetailsViewController, animated: true, completion: nil)
+        self.present(navigationController, animated: true, completion: nil)
     }
     
 }

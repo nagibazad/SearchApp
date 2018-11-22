@@ -32,7 +32,7 @@ extension SearchViewController: UISearchBarDelegate {
             collectionView.reloadData()
             collectionView.isHidden = true
             tableView.isHidden = false
-            tableView.reloadData()
+            fetchBookmarks()
         }
     }
     

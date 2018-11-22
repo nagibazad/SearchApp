@@ -1,15 +1,15 @@
 //
-//  SearchViewController+TableViewDelegate.swift
+//  BookmarkViewController+TableViewDelegate.swift
 //  SearchApp
 //
-//  Created by Nagib Azad on 21/11/18.
+//  Created by Nagib Azad on 22/11/18.
 //  Copyright © 2018 Nagib Bin Azad. All rights reserved.
 //
 
 import Foundation
-import UIKit.UITableView
+import UIKit
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookmarks.count
@@ -20,9 +20,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkCellIdentifier")
+        var cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkTableViewCellIdentifier")
         if cell == nil {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "BookmarkCellIdentifier")
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "BookmarkTableViewCellIdentifier")
         }
         let bookmark = bookmarks[indexPath.row]
         cell!.textLabel?.text = bookmark.title
@@ -42,5 +42,4 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         self.present(navigationController, animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }

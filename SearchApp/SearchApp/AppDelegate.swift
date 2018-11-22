@@ -17,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let tabbarController = UITabBarController()
+        let searchViewController = SearchViewController.initializeSearchViewController()
+        searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+        let historyViewController = HistoryViewController.initializeHistoryViewController()
+        let historyNavigationController = UINavigationController(rootViewController: historyViewController)
+        historyNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 2)
+        let bokmarkViewController = BookmarkViewController.initializeBookmarkViewController()
+        let bookmarkNavigationController = UINavigationController(rootViewController: bokmarkViewController)
+        bookmarkNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 3)
+        tabbarController.setViewControllers([searchViewController,historyNavigationController,bookmarkNavigationController], animated: true)
+        window = UIWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        window?.rootViewController = tabbarController
+        window?.makeKeyAndVisible()
         customizeAppearance()
         return true
     }
@@ -44,11 +57,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func customizeAppearance() {
-        window?.tintColor = tintColor
+//        window?.tintColor = tintColor
         UISearchBar.appearance().barTintColor = tintColor
-        UINavigationBar.appearance().barTintColor = tintColor
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue):UIColor.white]
+//       UINavigationBar.appearance().barTintColor = tintColor
+//        UIToolbar.appearance().barTintColor = tintColor
+//        UINavigationBar.appearance().tintColor = UIColor.white
+//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue):UIColor.white]
     }
 
 }
