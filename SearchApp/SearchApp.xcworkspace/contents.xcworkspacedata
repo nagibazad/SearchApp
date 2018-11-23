@@ -2,18 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SearchApp/CoreData/History+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:SearchApp/CoreData/History+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
-      location = "group:SearchApp/CoreData/Bookmark+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:SearchApp/CoreData/Bookmark+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:SearchApp.xcodeproj">
    </FileRef>
    <FileRef

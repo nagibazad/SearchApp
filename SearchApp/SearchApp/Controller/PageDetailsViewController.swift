@@ -49,7 +49,7 @@ class PageDetailsViewController: UIViewController {
         history.imageUrl = selectedPage.imageUrl
         history.pageUrl = selectedPage.pageUrl
         history.pageId = Int64(selectedPage.pageId)
-        history.time = Date()
+        history.time = NSDate()
         CoreDataHandler.sharedInstance.saveDataAsynchronusly(inManagedObjectContext: privateContext) { (success, error) in
             if success == true{
                 print("History saved Suceessfully")

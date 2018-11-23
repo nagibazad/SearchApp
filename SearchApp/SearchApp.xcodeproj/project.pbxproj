@@ -19,6 +19,10 @@
 		44AC77DF21A5B91E00AC9163 /* SearchDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44AC77DD21A5B91E00AC9163 /* SearchDataModel.xcdatamodeld */; };
 		44AC77E921A5BC0200AC9163 /* NSManagedObjectContext+RecursiveSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AC77E821A5BC0200AC9163 /* NSManagedObjectContext+RecursiveSave.swift */; };
 		44B307F421A56E39008E8C20 /* SearchViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B307F321A56E39008E8C20 /* SearchViewController+TableViewDelegate.swift */; };
+		44BCA50721A7BF0400EB2308 /* Bookmark+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCA50321A7BF0200EB2308 /* Bookmark+CoreDataProperties.swift */; };
+		44BCA50821A7BF0400EB2308 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCA50421A7BF0200EB2308 /* History+CoreDataClass.swift */; };
+		44BCA50921A7BF0400EB2308 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCA50521A7BF0300EB2308 /* History+CoreDataProperties.swift */; };
+		44BCA50A21A7BF0400EB2308 /* Bookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCA50621A7BF0400EB2308 /* Bookmark+CoreDataClass.swift */; };
 		44D31F9E21A457A90007F4D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31F9D21A457A90007F4D8 /* AppDelegate.swift */; };
 		44D31FA021A457A90007F4D8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31F9F21A457A90007F4D8 /* SearchViewController.swift */; };
 		44D31FA321A457A90007F4D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D31FA121A457A90007F4D8 /* Main.storyboard */; };
@@ -55,6 +59,10 @@
 		44AC77DE21A5B91E00AC9163 /* SearchDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SearchDataModel.xcdatamodel; sourceTree = "<group>"; };
 		44AC77E821A5BC0200AC9163 /* NSManagedObjectContext+RecursiveSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+RecursiveSave.swift"; sourceTree = "<group>"; };
 		44B307F321A56E39008E8C20 /* SearchViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		44BCA50321A7BF0200EB2308 /* Bookmark+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44BCA50421A7BF0200EB2308 /* History+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "History+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44BCA50521A7BF0300EB2308 /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44BCA50621A7BF0400EB2308 /* Bookmark+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
 		44D31F9A21A457A90007F4D8 /* SearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D31F9D21A457A90007F4D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D31F9F21A457A90007F4D8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +104,10 @@
 			children = (
 				44AC77DB21A5B87700AC9163 /* CoreDataHandler.swift */,
 				44AC77E821A5BC0200AC9163 /* NSManagedObjectContext+RecursiveSave.swift */,
+				44BCA50621A7BF0400EB2308 /* Bookmark+CoreDataClass.swift */,
+				44BCA50321A7BF0200EB2308 /* Bookmark+CoreDataProperties.swift */,
+				44BCA50421A7BF0200EB2308 /* History+CoreDataClass.swift */,
+				44BCA50521A7BF0300EB2308 /* History+CoreDataProperties.swift */,
 				44AC77DD21A5B91E00AC9163 /* SearchDataModel.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -367,14 +379,18 @@
 				44D31FB221A45EC10007F4D8 /* QueryService.swift in Sources */,
 				44B307F421A56E39008E8C20 /* SearchViewController+TableViewDelegate.swift in Sources */,
 				44089D0321A6BB9400FD05CF /* HistoryViewController+TableViewDelegate.swift in Sources */,
+				44BCA50921A7BF0400EB2308 /* History+CoreDataProperties.swift in Sources */,
+				44BCA50A21A7BF0400EB2308 /* Bookmark+CoreDataClass.swift in Sources */,
 				44089D0121A6B92B00FD05CF /* HistoryViewController.swift in Sources */,
 				44D31FA021A457A90007F4D8 /* SearchViewController.swift in Sources */,
 				44AC77DF21A5B91E00AC9163 /* SearchDataModel.xcdatamodeld in Sources */,
 				44D31FB021A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift in Sources */,
 				44AC77DC21A5B87700AC9163 /* CoreDataHandler.swift in Sources */,
+				44BCA50721A7BF0400EB2308 /* Bookmark+CoreDataProperties.swift in Sources */,
 				44AC77E921A5BC0200AC9163 /* NSManagedObjectContext+RecursiveSave.swift in Sources */,
 				44089D0721A6C5FF00FD05CF /* BookmarkViewController+TableViewDelegate.swift in Sources */,
 				4447D66321A5334B00574CF9 /* SearchViewController+ScrollDelegate.swift in Sources */,
+				44BCA50821A7BF0400EB2308 /* History+CoreDataClass.swift in Sources */,
 				44D31F9E21A457A90007F4D8 /* AppDelegate.swift in Sources */,
 				44089D0521A6C53B00FD05CF /* BookmarkViewController.swift in Sources */,
 				44089D0921A6D65E00FD05CF /* SearchTableViewCell.swift in Sources */,
