@@ -126,6 +126,11 @@
 				4447D66421A53DD800574CF9 /* PageDetailsViewController.swift */,
 				44089D0021A6B92B00FD05CF /* HistoryViewController.swift */,
 				44089D0421A6C53B00FD05CF /* BookmarkViewController.swift */,
+				44D31FAF21A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift */,
+				4447D66221A5334B00574CF9 /* SearchViewController+ScrollDelegate.swift */,
+				44B307F321A56E39008E8C20 /* SearchViewController+TableViewDelegate.swift */,
+				44089D0221A6BB9400FD05CF /* HistoryViewController+TableViewDelegate.swift */,
+				44089D0621A6C5FF00FD05CF /* BookmarkViewController+TableViewDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,18 +170,6 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
-		44BCA51221A7D4AA00EB2308 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				44D31FAF21A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift */,
-				4447D66221A5334B00574CF9 /* SearchViewController+ScrollDelegate.swift */,
-				44B307F321A56E39008E8C20 /* SearchViewController+TableViewDelegate.swift */,
-				44089D0221A6BB9400FD05CF /* HistoryViewController+TableViewDelegate.swift */,
-				44089D0621A6C5FF00FD05CF /* BookmarkViewController+TableViewDelegate.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		44D31F9121A457A90007F4D8 = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +196,6 @@
 				44D31F9D21A457A90007F4D8 /* AppDelegate.swift */,
 				44AC77DA21A5B86800AC9163 /* CoreData */,
 				44B489A921A487E400A0EC46 /* Controller */,
-				44BCA51221A7D4AA00EB2308 /* Extension */,
 				44B489AA21A487E400A0EC46 /* Model */,
 				44B489AB21A487E400A0EC46 /* Networking */,
 				44B489AC21A4881700A0EC46 /* CustomCell */,
