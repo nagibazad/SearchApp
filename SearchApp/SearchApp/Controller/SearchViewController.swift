@@ -19,7 +19,6 @@ class SearchViewController: UIViewController {
         var recognizer = UITapGestureRecognizer(target:self, action: #selector(dismissKeyboard))
         return recognizer
     }()
-    var lastContentOffset: CGFloat = 0
     var searchResults: [Page] = []
     var bookmarks: [Page] = []
     let queryService = QueryService()

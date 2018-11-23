@@ -14,39 +14,21 @@ extension SearchViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if let _ = scrollView as? UITableView {
             let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
-            if scrollView.contentOffset.y < 20 {
-                changeSearchBar(hidden: false, animated: false)
-                changeTabBar(hidden: false, animated: false)
-            }
-            else if bottomEdge >= scrollView.contentSize.height {
-                // we are at the end
-                //print("moved to bottom")
-                
+            if bottomEdge >= scrollView.contentSize.height {
                 if searchBar.text?.isEmpty == false {
                     sendRequestForData()
                 }
             }
-                
-            else if (self.lastContentOffset > scrollView.contentOffset.y) {
-                // move up
-                //print("move up")
-                if searchBar.text?.isEmpty == true {
-                    changeSearchBar(hidden: false, animated: true)
-                    changeTabBar(hidden: true, animated: true)
-                }
-                
-            }
-            else if (self.lastContentOffset < scrollView.contentOffset.y) {
-                // move down
-                //print("move down")
-                if searchBar.text?.isEmpty == true {
-                    changeSearchBar(hidden: true, animated: true)
-                    changeTabBar(hidden: false, animated: true)
-                }
-            }
-            
-            // update the new position acquired
-            self.lastContentOffset = scrollView.contentOffset.y
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
+            changeTabBar(hidden: false, animated: true)
+            changeSearchBar(hidden: true, animated: true)
+        }else{
+            changeTabBar(hidden: true, animated: true)
+            changeSearchBar(hidden: false, animated: true)
         }
         
     }
