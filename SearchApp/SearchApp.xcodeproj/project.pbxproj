@@ -27,8 +27,19 @@
 		44D31FB021A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FAF21A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift */; };
 		44D31FB221A45EC10007F4D8 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FB121A45EC00007F4D8 /* QueryService.swift */; };
 		44D31FB421A4634E0007F4D8 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31FB321A4634E0007F4D8 /* Page.swift */; };
+		44EEEF3221A72F8100F57D0B /* SearchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EEEF3121A72F8100F57D0B /* SearchAppTests.swift */; };
 		96C224BC897DF443AD7B8E4C /* Pods_SearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC28203B5B0F389FE44E53B1 /* Pods_SearchApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44EEEF3421A72F8100F57D0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44D31F9221A457A90007F4D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44D31F9921A457A90007F4D8;
+			remoteInfo = SearchApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		30540AA6D0063FB61B2AE882 /* Pods-SearchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchApp/Pods-SearchApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -54,6 +65,9 @@
 		44D31FAF21A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchViewController+SearchBarDelegate.swift"; sourceTree = "<group>"; };
 		44D31FB121A45EC00007F4D8 /* QueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		44D31FB321A4634E0007F4D8 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		44EEEF2F21A72F8000F57D0B /* SearchAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44EEEF3121A72F8100F57D0B /* SearchAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAppTests.swift; sourceTree = "<group>"; };
+		44EEEF3321A72F8100F57D0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8385EAED0579EDC3880EEE8A /* Pods-SearchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchApp/Pods-SearchApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FC28203B5B0F389FE44E53B1 /* Pods_SearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,6 +78,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				96C224BC897DF443AD7B8E4C /* Pods_SearchApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44EEEF2C21A72F8000F57D0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				44D31F9C21A457A90007F4D8 /* SearchApp */,
+				44EEEF3021A72F8100F57D0B /* SearchAppTests */,
 				44D31F9B21A457A90007F4D8 /* Products */,
 				A11A0F35387FAD2EDC279250 /* Pods */,
 				ED978D52A7BA62AF0F29A49F /* Frameworks */,
@@ -135,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				44D31F9A21A457A90007F4D8 /* SearchApp.app */,
+				44EEEF2F21A72F8000F57D0B /* SearchAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +177,15 @@
 				44D31FA921A457AB0007F4D8 /* Info.plist */,
 			);
 			path = SearchApp;
+			sourceTree = "<group>";
+		};
+		44EEEF3021A72F8100F57D0B /* SearchAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				44EEEF3121A72F8100F57D0B /* SearchAppTests.swift */,
+				44EEEF3321A72F8100F57D0B /* Info.plist */,
+			);
+			path = SearchAppTests;
 			sourceTree = "<group>";
 		};
 		A11A0F35387FAD2EDC279250 /* Pods */ = {
@@ -196,6 +228,24 @@
 			productReference = 44D31F9A21A457A90007F4D8 /* SearchApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		44EEEF2E21A72F8000F57D0B /* SearchAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44EEEF3821A72F8100F57D0B /* Build configuration list for PBXNativeTarget "SearchAppTests" */;
+			buildPhases = (
+				44EEEF2B21A72F8000F57D0B /* Sources */,
+				44EEEF2C21A72F8000F57D0B /* Frameworks */,
+				44EEEF2D21A72F8000F57D0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44EEEF3521A72F8100F57D0B /* PBXTargetDependency */,
+			);
+			name = SearchAppTests;
+			productName = SearchAppTests;
+			productReference = 44EEEF2F21A72F8000F57D0B /* SearchAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +258,10 @@
 				TargetAttributes = {
 					44D31F9921A457A90007F4D8 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					44EEEF2E21A72F8000F57D0B = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 44D31F9921A457A90007F4D8;
 					};
 				};
 			};
@@ -225,6 +279,7 @@
 			projectRoot = "";
 			targets = (
 				44D31F9921A457A90007F4D8 /* SearchApp */,
+				44EEEF2E21A72F8000F57D0B /* SearchAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +292,13 @@
 				44D31FA821A457AB0007F4D8 /* LaunchScreen.storyboard in Resources */,
 				44D31FA521A457AB0007F4D8 /* Assets.xcassets in Resources */,
 				44D31FA321A457A90007F4D8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44EEEF2D21A72F8000F57D0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +383,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44EEEF2B21A72F8000F57D0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44EEEF3221A72F8100F57D0B /* SearchAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44EEEF3521A72F8100F57D0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44D31F9921A457A90007F4D8 /* SearchApp */;
+			targetProxy = 44EEEF3421A72F8100F57D0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		44D31FA121A457A90007F4D8 /* Main.storyboard */ = {
@@ -499,6 +577,46 @@
 			};
 			name = Release;
 		};
+		44EEEF3621A72F8100F57D0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHBN7KJE99;
+				INFOPLIST_FILE = SearchAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Nagib-Bin-Azad.SearchAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SearchApp.app/SearchApp";
+			};
+			name = Debug;
+		};
+		44EEEF3721A72F8100F57D0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHBN7KJE99;
+				INFOPLIST_FILE = SearchAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Nagib-Bin-Azad.SearchAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SearchApp.app/SearchApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -516,6 +634,15 @@
 			buildConfigurations = (
 				44D31FAD21A457AB0007F4D8 /* Debug */,
 				44D31FAE21A457AB0007F4D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44EEEF3821A72F8100F57D0B /* Build configuration list for PBXNativeTarget "SearchAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44EEEF3621A72F8100F57D0B /* Debug */,
+				44EEEF3721A72F8100F57D0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
