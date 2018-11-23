@@ -27,12 +27,15 @@ class PageDetailsViewController: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor.black
         let bookmarkButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(bookmarkButtonPressed))
         navigationItem.rightBarButtonItem = bookmarkButton
+        let backButton = UIBarButtonItem(image: UIImage(named: "back"), style: .done, target: self, action: #selector(backButtonPressed))
+        navigationItem.leftBarButtonItem = backButton
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap))
         doubleTapGesture.numberOfTapsRequired = 2
         doubleTapGesture.delegate = self
         webView.addGestureRecognizer(doubleTapGesture)
         webView.navigationDelegate = self
         webView.load(URLRequest(url: selectedPage.pageUrl))
+        self.title = selectedPage.title
         saveHistry()
         
     }
@@ -41,6 +44,9 @@ class PageDetailsViewController: UIViewController {
         saveBookmark()
     }
     
+    @objc func backButtonPressed() {
+        dismiss(animated: true, completion: nil)
+    }
     func saveHistry() -> Void {
         
         let privateContext = CoreDataHandler.sharedInstance.privateManagedObjectContext()!
