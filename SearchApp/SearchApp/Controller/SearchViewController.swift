@@ -25,6 +25,7 @@ class SearchViewController: UIViewController {
     var isAnimating: Bool = false
     var isAnimatingSearchBar: Bool = false
     var offsetChanged: Int = 0
+    var modalTransition: CustomModalTransitionDelegate = CustomModalTransitionDelegate()
     
     class func initializeSearchViewController() -> SearchViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

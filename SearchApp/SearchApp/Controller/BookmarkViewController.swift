@@ -13,7 +13,8 @@ class BookmarkViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var bookmarks: [Page] = []
-    
+    var modalTransition: CustomModalTransitionDelegate = CustomModalTransitionDelegate()
+
     class func initializeBookmarkViewController() -> BookmarkViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let bookmarkViewController = storyboard.instantiateViewController(withIdentifier: "BookmarkViewControllerID") as! BookmarkViewController

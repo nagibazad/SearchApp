@@ -23,6 +23,9 @@
 		44BCA50821A7BF0400EB2308 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCA50421A7BF0200EB2308 /* History+CoreDataClass.swift */; };
 		44BCA50921A7BF0400EB2308 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCA50521A7BF0300EB2308 /* History+CoreDataProperties.swift */; };
 		44BCA50A21A7BF0400EB2308 /* Bookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCA50621A7BF0400EB2308 /* Bookmark+CoreDataClass.swift */; };
+		44BCA50C21A7CA9F00EB2308 /* FadeInAnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCA50B21A7CA9F00EB2308 /* FadeInAnimationTransition.swift */; };
+		44BCA50E21A7CE4F00EB2308 /* CustomModalTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCA50D21A7CE4F00EB2308 /* CustomModalTransitionDelegate.swift */; };
+		44BCA51021A7D01B00EB2308 /* FadeOutAnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCA50F21A7D01B00EB2308 /* FadeOutAnimationTransition.swift */; };
 		44D31F9E21A457A90007F4D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31F9D21A457A90007F4D8 /* AppDelegate.swift */; };
 		44D31FA021A457A90007F4D8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D31F9F21A457A90007F4D8 /* SearchViewController.swift */; };
 		44D31FA321A457A90007F4D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D31FA121A457A90007F4D8 /* Main.storyboard */; };
@@ -63,6 +66,9 @@
 		44BCA50421A7BF0200EB2308 /* History+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "History+CoreDataClass.swift"; sourceTree = "<group>"; };
 		44BCA50521A7BF0300EB2308 /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		44BCA50621A7BF0400EB2308 /* Bookmark+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44BCA50B21A7CA9F00EB2308 /* FadeInAnimationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInAnimationTransition.swift; sourceTree = "<group>"; };
+		44BCA50D21A7CE4F00EB2308 /* CustomModalTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalTransitionDelegate.swift; sourceTree = "<group>"; };
+		44BCA50F21A7D01B00EB2308 /* FadeOutAnimationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationTransition.swift; sourceTree = "<group>"; };
 		44D31F9A21A457A90007F4D8 /* SearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D31F9D21A457A90007F4D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D31F9F21A457A90007F4D8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 				44089D0221A6BB9400FD05CF /* HistoryViewController+TableViewDelegate.swift */,
 				44089D0421A6C53B00FD05CF /* BookmarkViewController.swift */,
 				44089D0621A6C5FF00FD05CF /* BookmarkViewController+TableViewDelegate.swift */,
+				44BCA50B21A7CA9F00EB2308 /* FadeInAnimationTransition.swift */,
+				44BCA50F21A7D01B00EB2308 /* FadeOutAnimationTransition.swift */,
+				44BCA50D21A7CE4F00EB2308 /* CustomModalTransitionDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -375,15 +384,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44BCA50E21A7CE4F00EB2308 /* CustomModalTransitionDelegate.swift in Sources */,
 				44089D0B21A6D67500FD05CF /* SearchTableViewCell+Configure.swift in Sources */,
 				44D31FB221A45EC10007F4D8 /* QueryService.swift in Sources */,
 				44B307F421A56E39008E8C20 /* SearchViewController+TableViewDelegate.swift in Sources */,
+				44BCA51021A7D01B00EB2308 /* FadeOutAnimationTransition.swift in Sources */,
 				44089D0321A6BB9400FD05CF /* HistoryViewController+TableViewDelegate.swift in Sources */,
 				44BCA50921A7BF0400EB2308 /* History+CoreDataProperties.swift in Sources */,
 				44BCA50A21A7BF0400EB2308 /* Bookmark+CoreDataClass.swift in Sources */,
 				44089D0121A6B92B00FD05CF /* HistoryViewController.swift in Sources */,
 				44D31FA021A457A90007F4D8 /* SearchViewController.swift in Sources */,
 				44AC77DF21A5B91E00AC9163 /* SearchDataModel.xcdatamodeld in Sources */,
+				44BCA50C21A7CA9F00EB2308 /* FadeInAnimationTransition.swift in Sources */,
 				44D31FB021A45CD90007F4D8 /* SearchViewController+SearchBarDelegate.swift in Sources */,
 				44AC77DC21A5B87700AC9163 /* CoreDataHandler.swift in Sources */,
 				44BCA50721A7BF0400EB2308 /* Bookmark+CoreDataProperties.swift in Sources */,

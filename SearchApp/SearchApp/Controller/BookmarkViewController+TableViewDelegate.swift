@@ -37,8 +37,7 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pageDetailsViewController = PageDetailsViewController.initializePageDetailsViewController(with: bookmarks[indexPath.row])
         let navigationController = UINavigationController(rootViewController: pageDetailsViewController)
-        navigationController.modalPresentationStyle = .overCurrentContext
-        navigationController.modalTransitionStyle = .crossDissolve
+        navigationController.transitioningDelegate = self.modalTransition
         self.present(navigationController, animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }

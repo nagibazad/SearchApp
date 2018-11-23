@@ -13,7 +13,7 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var histories: [Page] = []
-    
+    var modalTransition: CustomModalTransitionDelegate = CustomModalTransitionDelegate()
     class func initializeHistoryViewController() -> HistoryViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let historyViewController = storyboard.instantiateViewController(withIdentifier: "HistoryViewControllerID") as! HistoryViewController
