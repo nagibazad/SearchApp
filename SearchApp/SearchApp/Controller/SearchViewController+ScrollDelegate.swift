@@ -14,7 +14,11 @@ extension SearchViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if let _ = scrollView as? UITableView {
             let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
-            if bottomEdge >= scrollView.contentSize.height {
+            if scrollView.contentOffset.y < 20 {
+                changeSearchBar(hidden: false, animated: false)
+                changeTabBar(hidden: false, animated: false)
+            }
+            else if bottomEdge >= scrollView.contentSize.height {
                 if searchBar.text?.isEmpty == false {
                     sendRequestForData()
                 }
