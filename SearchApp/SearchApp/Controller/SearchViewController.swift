@@ -35,6 +35,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAdditionalUI()
         fetchBookmarks()
     }
 
@@ -69,7 +70,11 @@ class SearchViewController: UIViewController {
         }
     }
     
-    
-    
+    func setupAdditionalUI() -> Void {
+        if let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView {
+            let statusbarView = UIView(frame: statusBar.frame)
+            statusbarView.backgroundColor = UIColor(red: (247/255), green: (247/255), blue: (247/255), alpha: 1)
+            self.view.addSubview(statusbarView)
+        }
+    }
 }
-
